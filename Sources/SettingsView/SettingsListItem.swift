@@ -40,7 +40,7 @@ public struct SettingsListItem: View {
                     .imageScale(.small)
                     .fontWeight(.medium)
             }
-        }
+        }.contentShape(Rectangle())
     }
 
     // MARK: Internal

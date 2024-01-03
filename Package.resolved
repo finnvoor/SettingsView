@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "itunessearchapi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Finnvoor/iTunesSearchAPI.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "691c7f08100d0cc4180abe9424c2064e2d46fc4f"
+      }
+    },
+    {
+      "identity" : "updateavailablebutton",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/finnvoor/UpdateAvailableButton.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "957831d1020bccb06b3d296fdfa402e80c1ad2be"
+      }
+    }
+  ],
+  "version" : 2
+}
