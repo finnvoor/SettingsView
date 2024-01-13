@@ -12,7 +12,7 @@ public struct MastodonSettingsListItem: View {
     public var body: some View {
         Link(destination: url) {
             SettingsListItem(
-                title: url.lastPathComponent,
+                title: "Mastodon",
                 icon: Image(.mastodon),
                 color: Color(
                     red: 0x63 / 0xFF,
