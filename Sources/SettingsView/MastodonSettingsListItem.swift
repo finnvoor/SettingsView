@@ -10,7 +10,9 @@ public struct MastodonSettingsListItem: View {
     // MARK: Public
 
     public var body: some View {
-        Link(destination: url) {
+        Button(action: {
+            UIApplication.shared.open(url)
+        }) {
             SettingsListItem(
                 title: "Mastodon",
                 icon: Image(.mastodon),
@@ -21,7 +23,10 @@ public struct MastodonSettingsListItem: View {
                 ),
                 external: true
             )
-        }.buttonStyle(.plain)
+        }
+        #if !os(visionOS)
+        .buttonStyle(.plain)
+        #endif
     }
 
     // MARK: Private

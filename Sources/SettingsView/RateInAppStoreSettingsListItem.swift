@@ -10,14 +10,19 @@ public struct RateInAppStoreSettingsListItem: View {
     // MARK: Public
 
     public var body: some View {
-        Link(destination: URL(string: "https://apps.apple.com/app/id\(appID)?action=write-review")!) {
+        Button(action: {
+            UIApplication.shared.open(URL(string: "https://apps.apple.com/app/id\(appID)?action=write-review")!)
+        }) {
             SettingsListItem(
                 title: "Rate in App Store",
                 icon: Image(systemName: "star.bubble.fill"),
                 color: .yellow,
                 external: true
             )
-        }.buttonStyle(.plain)
+        }
+        #if !os(visionOS)
+        .buttonStyle(.plain)
+        #endif
     }
 
     // MARK: Internal

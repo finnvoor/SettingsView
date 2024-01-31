@@ -18,9 +18,14 @@ public struct LinkSettingsListItem: View {
     // MARK: Public
 
     public var body: some View {
-        Link(destination: destination) {
+        Button(action: {
+            UIApplication.shared.open(destination)
+        }) {
             SettingsListItem(title: title, icon: icon, color: color, external: true)
-        }.buttonStyle(.plain)
+        }
+        #if !os(visionOS)
+        .buttonStyle(.plain)
+        #endif
     }
 
     // MARK: Internal
