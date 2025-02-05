@@ -21,6 +21,7 @@ public struct SettingsListItem: View {
         HStack {
             Label {
                 Text(title)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .fontWeight(.medium)
             } icon: {
                 ZStack {
